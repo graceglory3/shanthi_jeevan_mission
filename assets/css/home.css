@@ -1,0 +1,5 @@
+.hero {
+  background: radial-gradient(1200px 600px at 10% 0%, #eef2ff 0%, #ffffff 60%);
+}
+.hero .btn-soft { border: 1px solid #d1fae5; }
+.grid .card h3 { margin: 0 0 8px 0; }
