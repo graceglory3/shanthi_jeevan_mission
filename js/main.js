@@ -22,6 +22,7 @@ function loadHeader() {
                 <li><a href="ministries.html" class="nav-link">Ministries</a></li>
                 <li><a href="mission-fields.html" class="nav-link">Missions</a></li>
                 <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="donate.html" class="btn btn-primary" style="padding: 8px 20px; color: var(--color-text-grey);">Donate</a></li>

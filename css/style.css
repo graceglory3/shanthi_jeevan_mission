@@ -185,25 +185,14 @@ header {
 
 }
 
-
-
 .logo-img {
-height: 50px;
-border-radius: 50%; /* makes it perfectly round */
-object-fit: cover;
-background: transparent; /* removes white box */
-box-shadow: none; /* remove any shadow */
+    height: 50px;
+    width: auto; /* Keeps the correct oval shape and proportions */
+    border-radius:100%;
+    object-fit: contain; /* Ensures the whole logo is visible */
+    background: transparent;
+    box-shadow: none;
 }
-
-/* .logo span {
-    color: var(--color-primary-gold);
-} */
-
-/*.logo-img {
-height: 48px;  Desktop default */
-/* width: auto;  Keep proportions 
-object-fit: contain;
-}*/
 
 
 .logo-text {
@@ -301,6 +290,13 @@ color: #FF6F20; /* Accent color */
     margin: 0 auto 20px;
     color: var(--color-primary-gold);
     font-size: 2rem;
+}
+/* Grids */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
 }
 
 /* Footer */
