@@ -1,7 +1,7 @@
 :root {
     /* Color Palette */
-    --color-primary-blue: #0F2A44;
-    --color-primary-gold: #F2B705;
+    --color-primary-blue: #4AA9E8;
+    --color-primary-gold: #FF6F20;
     --color-bg-white: #F9FAFB;
     --color-text-grey: #6B7280;
     --color-success-green: #4CAF50;
@@ -9,7 +9,7 @@
     --color-black: #111827;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, #0F2A44 0%, #1E4D75 100%);
+    --gradient-hero: linear-gradient(135deg, #4AA9E8 0%, #1E4D75 100%);
     --gradient-soft: linear-gradient(180deg, #F9FAFB 0%, #EFF6FF 100%);
     
     /* Typography */
@@ -72,6 +72,24 @@ ul {
     list-style: none;
 }
 
+  ul.bullet-list {
+    /* list-style-type: disc; */
+     /* Classic bullets */
+    /* margin-left: 20px; */
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  ul.bullet-list li {
+    margin-bottom: 15px; /* Space between bullets */
+  }
+
+  ul.bullet-list li strong {
+    color: black; /* Highlighted bold text in blue */
+  }
+  
 /* Utilities */
 .container {
     max-width: var(--max-width);
@@ -93,7 +111,7 @@ ul {
 
 .btn-primary {
     background-color: var(--color-primary-gold);
-    color: var(--color-primary-blue);
+    color: var(--color-bg-white);
 }
 
 .btn-primary:hover {
@@ -163,30 +181,42 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+
+}
+
+
+
+.logo-img {
+height: 50px;
+border-radius: 50%; /* makes it perfectly round */
+object-fit: cover;
+background: transparent; /* removes white box */
+box-shadow: none; /* remove any shadow */
 }
 
 /* .logo span {
     color: var(--color-primary-gold);
 } */
 
-.logo-img {
-height: 48px; /* Desktop default */
-width: auto; /* Keep proportions */
+/*.logo-img {
+height: 48px;  Desktop default */
+/* width: auto;  Keep proportions 
 object-fit: contain;
-}
+}*/
 
 
 .logo-text {
 font-size: 18px;
 font-weight: 600;
-color: #0F2A44; /* Midnight Blue */
+color: #4AA9E8; /* Midnight Blue */
 line-height: 1.2;
 }
 
 
 .logo-text span {
 font-weight: 500;
-color: #F2B705; /* Accent color */
+color: #FF6F20; /* Accent color */
 }
 
 .nav-menu {
@@ -275,7 +305,9 @@ color: #F2B705; /* Accent color */
 
 /* Footer */
 footer {
-    background-color: var(--color-primary-blue);
+    /* background-color: var(--color-primary-blue);
+    color: var(--color-white); */
+    background: var(--gradient-hero);
     color: var(--color-white);
     padding: 80px 0 30px;
 }
@@ -288,7 +320,7 @@ footer {
 }
 
 .footer-col h3 {
-    color: var(--color-primary-gold);
+    color: white;
     margin-bottom: 1.5rem;
 }
 
@@ -308,7 +340,7 @@ footer {
     text-align: center;
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(30, 7, 7, 0.6);
 }
 
 /* Bible Verse Banner */

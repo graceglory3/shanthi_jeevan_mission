@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadHeader() {
     const headerHTML = `
     <div class="container nav-container">
-        <a href="index.html" class="logo">
-            <img src="images/logo.jpeg" alt="" class="logo-img">
-            <span class="logo-text">Shanthi Jeevan <span>Mission</span></span>
-        </a>
+<a href="index.html" class="logo">
+<img src="images/logo.png" alt="Shanthi Jeevan Mission Logo" class="logo-img">
+<span class="logo-text">Shanthi Jeevan <span>Mission</span></span>
+</a>
         <div class="mobile-toggle" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
@@ -24,7 +24,7 @@ function loadHeader() {
                 <li><a href="impact.html" class="nav-link">Impact</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="donate.html" class="btn btn-primary" style="padding: 8px 20px; color: var(--color-primary-blue);">Donate</a></li>
+                <li><a href="donate.html" class="btn btn-primary" style="padding: 8px 20px; color: var(--color-text-grey);">Donate</a></li>
             </ul>
         </nav>
     </div>
@@ -40,10 +40,11 @@ function loadFooter() {
         <div class="footer-content">
             <div class="footer-col">
                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                    <img src="images/logo.jpeg" alt="Logo" style="height: 50px; width: auto;">
-                    <h3 style="margin: 0; font-size: 1.2rem;">Shanthi Jeevan</h3>
+                    <img src="images/logo.png" alt="Logo" style="height: 50px; width: auto;" >
+                    <h3 style="margin: 0; font-size: 1.2rem;">Shanthi Jeevan Mission</h3>
+                    
                 </div>
-                <p>Bringing hope, healing, and holistic development to the marginalized communities through the love of Christ.</p>
+                <p style="color: black;">Bringing hope, healing, and holistic development to the marginalized communities through the love of Christ.</p>
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
@@ -57,14 +58,14 @@ function loadFooter() {
             <div class="footer-col">
                 <h3>Contact Info</h3>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Mission Road, City, Country</li>
-                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
-                    <li><i class="fas fa-envelope"></i> contact@shanthijeevan.org</li>
+                    <li><i class="fas fa-map-marker-alt"></i>  5/265A, Kotaibyrahalli, Solaikottai (PO), Dharmapuri, Tamil Nadu, India – 636704</li>
+                    <li><i class="fas fa-phone"></i> +91 8903550483</li>
+                    <li><i class="fas fa-envelope"></i> shanthijeevanevangelical@gmail.com</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Shanthi Jeevan Evangelical Mission. All Rights Reserved.</p>
+            <p  style="color: black;">&copy; 2026 Shanthi Jeevan Evangelical Mission. All Rights Reserved.</p>
         </div>
     </div>
     `;
