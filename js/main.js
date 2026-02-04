@@ -22,6 +22,7 @@ function loadHeader() {
                 <li><a href="ministries.html" class="nav-link">Ministries</a></li>
                 <li><a href="mission-fields.html" class="nav-link">Missions</a></li>
                 <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="donate.html" class="btn btn-primary" style="padding: 8px 20px; color: var(--color-text-grey);">Donate</a></li>
@@ -44,7 +45,7 @@ function loadFooter() {
                     <h3 style="margin: 0; font-size: 1.2rem;">Shanthi Jeevan Mission</h3>
                     
                 </div>
-                <p style="color: black;">Bringing hope, healing, and holistic development to the marginalized communities through the love of Christ.</p>
+                <p style="color: white;">Bringing hope, healing, and holistic development to the marginalized communities through the love of Christ.</p>
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
@@ -65,7 +66,7 @@ function loadFooter() {
             </div>
         </div>
         <div class="footer-bottom">
-            <p  style="color: black;">&copy; 2026 Shanthi Jeevan Evangelical Mission. All Rights Reserved.</p>
+            <p  style="color: white;">&copy; 2026 Shanthi Jeevan Evangelical Mission. All Rights Reserved.</p>
         </div>
     </div>
     `;

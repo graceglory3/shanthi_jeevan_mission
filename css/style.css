@@ -86,9 +86,6 @@ ul {
     margin-bottom: 15px; /* Space between bullets */
   }
 
-  ul.bullet-list li strong {
-    color: black; /* Highlighted bold text in blue */
-  }
   
 /* Utilities */
 .container {
@@ -117,7 +114,7 @@ ul {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
-    background-color: #d9a404;
+    background-color: #24dcbe;
 }
 
 .btn-outline {
@@ -185,25 +182,14 @@ header {
 
 }
 
-
-
 .logo-img {
-height: 50px;
-border-radius: 50%; /* makes it perfectly round */
-object-fit: cover;
-background: transparent; /* removes white box */
-box-shadow: none; /* remove any shadow */
+    height: 50px;
+    width: auto; /* Keeps the correct oval shape and proportions */
+    border-radius:100%;
+    object-fit: contain; /* Ensures the whole logo is visible */
+    background: transparent;
+    box-shadow: none;
 }
-
-/* .logo span {
-    color: var(--color-primary-gold);
-} */
-
-/*.logo-img {
-height: 48px;  Desktop default */
-/* width: auto;  Keep proportions 
-object-fit: contain;
-}*/
 
 
 .logo-text {
@@ -218,8 +204,66 @@ line-height: 1.2;
 font-weight: 500;
 color: #FF6F20; /* Accent color */
 }
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-white);
+    color: var(--color-primary-blue);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Page Transition Base - Ensure visible by default */
+    opacity: 1;
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* body.loaded removed as it is no longer needed for visibility */
+
+body.page-exit {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+body.page-enter {
+    animation: slideInRight 0.5s forwards;
+}
+@keyframes slideOutLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-20px); opacity: 0; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
 
 .nav-menu {
+    font-family: "Inter", "Roboto", "Open Sans", Arial, sans-serif;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-primary-blue);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-primary-gold);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* .nav-menu {
     display: flex;
     gap: 30px;
 }
@@ -232,7 +276,7 @@ color: #FF6F20; /* Accent color */
 
 .nav-link:hover, .nav-link.active {
     color: var(--color-primary-gold);
-}
+} */
 
 .mobile-toggle {
     display: none;
@@ -302,14 +346,35 @@ color: #FF6F20; /* Accent color */
     color: var(--color-primary-gold);
     font-size: 2rem;
 }
+/* Grids */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
 
 /* Footer */
-footer {
-    /* background-color: var(--color-primary-blue);
-    color: var(--color-white); */
+/* footer {
     background: var(--gradient-hero);
     color: var(--color-white);
+    background-image: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.75)), url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white;">
     padding: 80px 0 30px;
+} */
+
+footer {
+    /* Background gradient overlay + image */
+    background-image: 
+        linear-gradient(rgba(28, 140, 165, 0.85), rgba(11, 37, 69, 0.75)),
+        url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+         /* replace with local path if needed */
+    background-size: cover;       /* cover entire footer */
+    background-repeat: no-repeat; /* prevent tiling */
+    /* Text color */
+    color: white;
+    /* Padding */
+    padding: 80px 0 30px;
+    width: 100%;
 }
 
 .footer-content {
@@ -448,5 +513,9 @@ footer {
     
     .hero-buttons {
         flex-direction: column;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }
