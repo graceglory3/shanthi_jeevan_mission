@@ -132,3 +132,32 @@ function initGalleryFilter() {
         });
     });
 }
+
+const form = document.getElementById('contactForm');
+const modal = document.getElementById('thankyouModal');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            modal.style.display = 'flex'; // show modal
+            form.reset();
+            setTimeout(() => { modal.style.display = 'none'; }, 5000); // auto-hide after 5s
+        } else {
+            alert('Oops! Something went wrong.');
+        }
+    }).catch(error => {
+        alert('Oops! Something went wrong.');
+    });
+});
+
+function closeModal() {
+    modal.style.display = 'none';
+}
